@@ -1,0 +1,105 @@
+@font-face {
+    font-family:"Tangerine";
+    src: url(blackjack-webfont.woff);
+}
+@font-face {
+    font-family:"DroidSans";
+    src: url(DroidSans-webfont.woff);
+}
+@font-face {
+    font-family:"DroidSansBold";
+    src: url(DroidSans-Bold-webfont.woff);
+}
+body {
+    margin: 0;
+    background-color: gray;
+    box-sizing: border-box;
+}
+.topnav-container {
+    background-image: linear-gradient(to bottom right, mediumpurple, indigo);  
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-bottom: 5px;
+}
+.topnav { 
+    margin-left: auto;
+}
+.topnav a {
+    font-family: "DroidSansBold";
+    color: whitesmoke;
+    flex-direction: column; 
+    font-size: .75rem;
+    text-decoration: none;
+    position: relative;
+    right: 10px;
+    flex-wrap: nowrap;   
+}
+a:hover {
+    background-color: gray;
+}
+.logo {
+    font-family: "Tangerine";
+    font-size: 2rem;
+    color: darkgrey;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    text-shadow: 2px 2px indigo;
+    margin-left: 5px;
+}
+h4 {
+    font-family: "DroidSansBold";
+}
+h5 {
+    font-family: "DroidSansBold";
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+img {
+    border-radius: 5px;
+    width: auto;
+    height: 250px;
+    position: relative;
+    left: 50px;
+    padding: 15px;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background-color: lavender;
+    color: gray;
+    border-radius: 5px;
+    width: 33.33%;
+    position: relative;
+    font-family: "DroidSans";
+    left: 70px;
+    top: 30px;
+    margin: 5px;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.container {
+    padding: 2px 12px 5px;
+    width: auto;
+}
+.readmore {
+    position: relative;
+    bottom: 15px;
+}
+.readmore a:link{
+    color: indigo;
+    margin-left: 10px;
+}
+.readmore a:hover {
+    background-color: gray;
+    text-decoration: none;
+}
+/* @media (min-width: 550px) {
+}
+.card {
+max-width: 33.33%;
+} */
