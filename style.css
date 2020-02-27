@@ -18,8 +18,8 @@ body {
 .topnav-container {
     background-image: linear-gradient(to bottom right, mediumpurple, indigo);  
     display: flex;
+    flex-direction: row;
     align-items: flex-end;
-    justify-content: flex-start;
     padding-bottom: 5px;
 }
 .topnav { 
@@ -28,24 +28,16 @@ body {
 .topnav a {
     font-family: "DroidSansBold";
     color: whitesmoke;
-    flex-direction: column; 
+    flex-direction: row; 
     font-size: .75rem;
     text-decoration: none;
     position: relative;
-    right: 10px;
-    flex-wrap: nowrap;   
 }
 a:hover {
     background-color: gray;
 }
 .logo {
-    font-family: "Tangerine";
-    font-size: 2rem;
-    color: darkgrey;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    text-shadow: 2px 2px indigo;
-    margin-left: 5px;
+    /* width: 100%; */
 }
 h4 {
     font-family: "DroidSansBold";
