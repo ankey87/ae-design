@@ -18,10 +18,19 @@ body {
     font-family: "DroidSans";
     font-weight: 400;
 }
+h1 {
+    font-family: "DroidSansBold";
+    font-weight: 500;
+    top: 50px;
+    position: relative;
+}
 h2 {
     font-family: "DroidSansBold";
     margin-left: 5px;
     text-align: center;
+}
+h4 {
+    font-family: "DroidSansBold";
 }
 p {
     margin-left: 5px;
@@ -40,34 +49,8 @@ p {
     margin-top: 5px;
     border-radius: 50px;
 } 
-.bio-img {
-    max-width: 100%;
-    max-height: 400px;
-    min-height: 300px;
-    position: relative;
-    top: 30px;
-    padding-bottom: 20px;
-    
-}
-.photo-grid {
-    display: flex;
-    flex-direction: column;
-    object-fit: cover;
-    align-items: center;
-}
-.bio-img-1, .bio-img-2, .bio-img-3 {
-    margin-top: 10px; 
-    max-width: 100%;
-    height: 250px;
-}
-.photo-grid_img > img {
-    width: 100%;
-    min-width: 40%;
-    max-width: 450px;
-    min-height: 200px;
-    max-height: 200px;
-    object-fit: cover;
-}
+
+
 /* navigation styles start here */
 
 header {
@@ -148,29 +131,58 @@ nav a:hover {
     opacity: 1;
     transition: opacity 250ms ease-in-out 250ms;
 }
+
+/* blog css */
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.card > img {
+    border-radius: 5px;
+    width: 100%;
+    min-height: 200px;
+    max-height: 500px;
+    position: relative;
+    padding: 10px;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background-color: lavender;
+    color: gray;
+    border-radius: 5px;
+    width: 89%;
+    position: relative;
+    font-family: "DroidSans";
+    margin: 5px;
+    top: 70px;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.container {
+    padding: 2px 12px 5px;
+    width: auto;
+}
+.readmore {
+    position: relative;
+    bottom: 15px;
+}
+.readmore a:link{
+    color: indigo;
+    margin-left: 10px;
+}
+.readmore a:hover {
+    background-color: gray;
+    text-decoration: none;
+}
 @media (min-width: 700px){
-    .photo-grid {
-        display: flex;
-        flex-direction: row;
-        object-fit: cover;
-        align-items: center;
-    }
     .logo {
         width: 30%;
-    }
-    .photo-grid_img {
-        width: 100%;
-        min-width: 20%;
-        max-width: 250px;
-        min-height: 100px;
-        max-height: 200px;
-        object-fit: cover;
-        position: relative;
-        margin: 5px;
-    }
-    .bio-img {
-        max-height: 200px;
-        top: 50px;
     }
     .nav-toggle-label {
         display: none;
@@ -217,6 +229,19 @@ nav a:hover {
     nav a:hover::before {
         transform: scale(1, 1);
     }
+    .card-container {
+        display: flex;
+        flex-direction: row;
+    }
+    .card {
+        margin-top: 10px;
+        margin-left: 27px;
+        padding-right: 10px;
+        padding-left: 10px;
+        width: 40%;
+        background-color: lavender;
+        flex-wrap: wrap;
+    }
 }
 @media (min-width: 850px) {
     .logo {
@@ -226,20 +251,5 @@ nav a:hover {
 @media (min-width: 1000px) {
     .logo {
         width: 20%;
-    }
-    .bio-img {
-        max-width: 100%;
-        max-height: 500px;
-        min-height: 300px;
-    }
-    .photo-grid_img {
-        width: 100%;
-        min-width: 20%;
-        max-width: 400px;
-        min-height: 100px;
-        max-height: 200px;
-        object-fit: cover;
-        position: relative;
-        margin: 5px;
     }
 }
