@@ -18,6 +18,7 @@ body {
     font-family: "DroidSans";
     font-weight: 400;
 }
+/* Can h1-h4 font-family: "DroidSansBold", be combined? */
 h1 {
     font-family: "DroidSansBold";
     font-weight: 500;
