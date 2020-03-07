@@ -1,0 +1,245 @@
+@font-face {
+    font-family:"DroidSans";
+    src: url(DroidSans-webfont.woff);
+}
+@font-face {
+    font-family:"DroidSansBold";
+    src: url(DroidSans-Bold-webfont.woff);
+}
+:root {
+    --background: rgba(84, 209, 177, 0.85);
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}   
+body {
+    margin: 0;
+    background-color: lightslategray;
+    font-family: "DroidSans";
+    font-weight: 400;
+}
+h2 {
+    font-family: "DroidSansBold";
+    margin-left: 5px;
+    text-align: center;
+}
+p {
+    margin-left: 5px;
+    margin-right: 5px;
+    text-indent: 10px;
+}
+.content {
+    height: 145vh;
+    background-color: lightslategray;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+}
+.logo {
+    width: 10%;
+    margin-top: 5px;
+    border-radius: 50px;
+} 
+.bio-img {
+    max-width: 100%;
+    max-height: 400px;
+    min-height: 300px;
+    position: relative;
+    top: 30px;
+    padding-bottom: 20px;
+    
+}
+.photo-grid {
+    display: flex;
+    flex-direction: column;
+    object-fit: cover;
+    align-items: center;
+}
+.bio-img-1, .bio-img-2, .bio-img-3 {
+    margin-top: 10px; 
+    max-width: 100%;
+    height: 250px;
+}
+.photo-grid_img > img {
+    width: 100%;
+    min-width: 40%;
+    max-width: 450px;
+    min-height: 200px;
+    max-height: 200px;
+    object-fit: cover;
+}
+/* navigation styles start here */
+
+header {
+    background: var(--background);
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+.nav-toggle {
+    display: none;
+}
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: var(--background);
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+.nav-toggle-label span::after {
+    top: 7px;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+nav a:hover {
+    color: #000;
+}
+.nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+}
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+@media (min-width: 700px){
+    .photo-grid {
+        display: flex;
+        flex-direction: row;
+        object-fit: cover;
+        align-items: center;
+    }
+    .logo {
+        width: 30%;
+    }
+    .photo-grid_img {
+        width: 100%;
+        min-width: 20%;
+        max-width: 250px;
+        min-height: 100px;
+        max-height: 200px;
+        object-fit: cover;
+        position: relative;
+        margin: 5px;
+    }
+    .bio-img {
+        max-height: 200px;
+        top: 50px;
+    }
+    .nav-toggle-label {
+        display: none;
+    }
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    }
+    .logo {
+        grid-column: 2 / 3;
+        width: 50%;
+    }   
+    nav {
+        all: unset;
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    } 
+    nav a {
+        opacity: 1;
+        position: relative;
+    }
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+    nav li {
+        margin-left: 3em;
+        margin-bottom: 0;
+    }
+    nav a::before {
+        content: '';
+        display: block;
+        height: 5px;
+        background: black;
+        position: absolute;
+        top: -.75em;
+        left: 0;
+        right: 0;
+        transform: scale(0, 1);
+        transition: transform ease-in-out 250ms;
+    }
+    nav a:hover::before {
+        transform: scale(1, 1);
+    }
+}
+@media (min-width: 850px) {
+    .logo {
+        width: 30%;
+    }
+}
+@media (min-width: 1000px) {
+    .logo {
+        width: 20%;
+    }
+    .bio-img {
+        max-width: 100%;
+        max-height: 500px;
+        min-height: 300px;
+    }
+    .photo-grid_img {
+        width: 100%;
+        min-width: 20%;
+        max-width: 400px;
+        min-height: 100px;
+        max-height: 200px;
+        object-fit: cover;
+        position: relative;
+        margin: 5px;
+    }
+}
