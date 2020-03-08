@@ -1,10 +1,10 @@
 @font-face {
     font-family:"DroidSans";
-    src: url(DroidSans-webfont.woff);
+    src: url(DroidSans-webfont.woff) format("woff");
 }
 @font-face {
     font-family:"DroidSansBold";
-    src: url(DroidSans-Bold-webfont.woff);
+    src: url(DroidSans-Bold-webfont.woff) format ("woff");
 }
 :root {
     --background: rgba(84, 209, 177, 0.85);
@@ -15,11 +15,11 @@
 body {
     margin: 0;
     background-color: lightslategray;
-    font-family: "DroidSans";
+    font-family: "DroidSans", sans-serif;
     font-weight: 400;
 }
 h2 {
-    font-family: "DroidSansBold";
+    font-family: "DroidSansBold", sans-serif;
     margin-left: 5px;
     text-align: center;
 }

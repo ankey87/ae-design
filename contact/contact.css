@@ -15,11 +15,11 @@
 body {
     margin: 0;
     background-color: lightslategray;
-    font-family: "DroidSans";
+    font-family: "DroidSans", sans-serif;
     font-weight: 400;
 }
 h2 {
-    font-family: "DroidSansBold";
+    font-family: "DroidSansBold", sans-serif;
     margin-left: 5px;
     text-align: center;
 }
